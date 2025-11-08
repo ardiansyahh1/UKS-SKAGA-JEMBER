@@ -269,6 +269,7 @@
         }
 
         /* Warna berbeda untuk setiap peran */
+        .pembimbing .structure-role { background-color: #0818f2; color:#10eeee}
         .ketua .structure-role { background-color: #e74c3c; }
         .wakil .structure-role { background-color: #e67e22; }
         .bendahara .structure-role { background-color: #f1c40f; color: #333; }
