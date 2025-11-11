@@ -457,6 +457,73 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
 
+        /* ==== Struktur Organisasi UKS ==== */
+.org-chart {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+.level {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.box {
+  background: linear-gradient(180deg, #ffcc00, #ff9900);
+  padding: 15px 25px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  color: #000;
+  min-width: 180px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.box:hover {
+  transform: scale(1.05);
+}
+
+.box .role {
+  font-weight: bold;
+}
+
+.box .name {
+  text-decoration: none;
+  margin-top: 5px;
+}
+
+/* Warna khusus per peran */
+.pembimbing { background: linear-gradient(90deg, #01cbfd, #0059ff ); color: #fff; }
+.ketua { background: linear-gradient(180deg, #01cbfd, #0059ff); color: #fff; }
+.wakil, .bendahara, .sekertaris, .kebersihan, .keamanan {
+  background: linear-gradient(180deg, #01cbfd, #0059ff);
+  color: #fff;
+}
+
+.divider {
+  width: 3px;
+  height: 20px;
+  background: #555;
+  margin: 0 auto;
+}
+
+/* Responsif */
+@media (max-width: 768px) {
+  .level {
+    flex-direction: column;
+    align-items: center;
+  }
+  .box {
+    min-width: 80%;
+  }
+}
+
+
         /* Animations */
         @keyframes fadeIn {
             from { opacity: 0; }
@@ -535,6 +602,8 @@
                 right: 20px;
                 top: 20px;
             }
+
+            
             
             .nav-links {
                 display: none;
@@ -576,3 +645,6 @@
                 padding: 20px;
             }
         }
+
+
+        
